@@ -1,14 +1,16 @@
 # ChatBOT
-Overview
+
+## Overview
 
 This README provides an overview of creating a chatbot using a Transformer-based model. A chatbot is a type of software that can help humans by automating conversations and interacting with them through messaging platforms or it’s just a form of artificial intelligence (AI) that interact with humans. It can be used for customer service, request routing, information gathering, and simple chit-chat. There are several gadgets in the market specially designed for Virtual assistance like Alexa, Google home, etc and some may find that virtual assistance on any online service providing website and telling the difference whether the replies generated from the machine or a human might not be easy, ever wondered how they work? let’s build our own chatbot completely from scratch using TensorFlow without using any kind of predefined APIs.
 
-Table of contents:-
+### Table of contents:-
 1. Prerequisites
 2. Setup
 3. Training the Chatbot
-4. Deploying the Chatbot
-5. Future Improvements
+4. Results
+5. Deploying the Chatbot
+6. Future Improvements
 
 ### 1. Prerequisites
    
@@ -72,11 +74,27 @@ Our features of concern are ‘question’ and ‘answer’.
    
 3. Self-Attention and Multi-Head Attention:
 
+   Self Attention allows transformer models to attend to different parts of the input or output sequences when making predictions.The self-attention mechanism is the heart of the transformer, allowing the model to weigh the importance of different words in a sentence based on their affinity with each other. These mechanisms are crucial for the performance of transformer models in tasks such as language translation, text summarization, and sentiment analysis, where the model needs to understand the relationships between different words or phrases in the input and output sequences.
    
-5. Train the model: Use your preprocessed dataset to train the model. You may need to adjust hyperparameters and fine-tune the training process for your specific use case.
-6. Save the trained model: After training, save the model weights and architecture for later use.
+   Multi head Attention is nothing but the calculation of ‘self-attention’ multiple times to extract multiple types of attention for each word in a sentence.
 
-### 4. Deploying the Chatbot
+5. Encoder and Decoder:
+
+   The transformer architecture is composed of an encoder and a decoder, each of which is made up of multiple layers of self-attention and feedforward neural networks.
+
+   The encoder takes in the input sentence and produces a fixed-size vector representation of it, which is then fed into the decoder to generate the output sentence.
+
+   The decoder uses both self-attention and cross-attention, where the attention mechanism is applied to the output of the encoder and the input of the decoder.
+
+7. Transformer:
+
+   Encoder call --> decoder call --> dense layer --> word tokens, the final dense layer will of ‘answer’ vocab size, 128 X 10 X 512 shaped tensor as the decoder output passed through a final dense layer having ‘answer’ vocab_size number of dense units, so final dense layer output tensor will be of shape 128 X 10 X 27360 (tokenizer_a.vocab_size +2), where ‘128’:batch_size, ‘10’: answer input seq length.
+
+### 5. Results-
+
+Train the model by adjusting hyperparameters and no. of epochs. More the no. of epochs trained better will be responses/answers by our Chatbot.
+
+### 6. Deploying the Chatbot
 
 There are several ways to deploy your chatbot:
 
@@ -84,11 +102,9 @@ There are several ways to deploy your chatbot:
 2. Messaging Platform: Integrate your chatbot with messaging platforms like Facebook Messenger, Slack, or WhatsApp.
 3. Command Line Interface: Build a command-line interface for local usage.
 
-Choose the deployment method that best suits your project's requirements.
+In our case we have deployed it using Web Application.
 
-
-
-### 6. Future Improvements
+### 7. Future Improvements
 
 To enhance our chatbot, you can consider the following improvements:
 
