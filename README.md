@@ -1,8 +1,8 @@
 # ChatBOT
-
+![logo](banner.jpg)
 ## Overview
 
-This README provides an overview of creating a chatbot using a Transformer-based model. A chatbot is a type of software that can help humans by automating conversations and interacting with them through messaging platforms or it’s just a form of artificial intelligence (AI) that interact with humans. It can be used for customer service, request routing, information gathering, and simple chit-chat. There are several gadgets in the market specially designed for Virtual assistance like Alexa, Google home, etc and some may find that virtual assistance on any online service providing website and telling the difference whether the replies generated from the machine or a human might not be easy, ever wondered how they work? let’s build our own chatbot completely from scratch using TensorFlow without using any kind of predefined APIs.
+A chatbot is a type of software that can help humans by automating conversations and interacting with them through messaging platforms or it’s just a form of artificial intelligence (AI) that interact with humans. It can be used for customer service, request routing, information gathering, and simple chit-chat. There are several gadgets in the market specially designed for Virtual assistance like Alexa, Google home, etc and some may find that virtual assistance on any online service providing website and telling the difference whether the replies generated from the machine or a human might not be easy, ever wondered how they work? let’s build our own chatbot completely from scratch using TensorFlow without using any kind of predefined APIs.
 
 ### Table of contents:-
 1. Prerequisites
